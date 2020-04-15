@@ -1,0 +1,15 @@
+{
+  "name": "search-files",
+  "version": "1.0.0",
+  "description": "CLI para buscar arquivos",
+  "preferGlobal": true,
+  "bin": {
+    "search-files": "./bin/search-files"
+  },
+  "files": [
+    "./bin"
+  ],
+  "keywords": [],
+  "author": "JuninhSilva14",
+  "license": "MIT"
+}
