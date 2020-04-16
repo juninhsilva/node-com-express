@@ -1,0 +1,53 @@
+- var siteName = "Meu template Pug";
+
+doctype html
+html.h-100(lang='pt-br')
+    head
+        meta(charset='UTF-8')
+        meta(
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        )
+        link(
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        )
+        
+        style.
+            main > .container {
+                padding: 60px 15px 0;
+            }
+
+            .footer {
+                background-color: #f5f5f5;
+            }
+
+            .footer > .container {
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+
+        block head
+            title #{siteName} - #{title}
+
+    body.d-flex.flex-column.h-100
+    header    
+        nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
+            a.navbar-brand(href='#') #{siteName}
+            #navbarCollapse.collapse.navbar-collapse
+                ul.navbar-nav.mr-auto
+                    li.nav-item
+                        a.nav-link(href='/') Início
+                    li.nav-item
+                        a.nav-link(href='/sobre') Sobre
+                    li.nav-item
+                        a.nav-link(href='/posts') Posts
+                    li.nav-item
+                        a.nav-link(href='/contato') Contato
+
+    main.flex-shrink-0(role="main")
+        block content
+    
+    include footer
